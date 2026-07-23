@@ -1,0 +1,8 @@
+{
+  "name": "claude-dev-container-py",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root",
+  "postCreateCommand": "uv sync"
+}

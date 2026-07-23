@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    image: ghcr.io/kixixixixi/claude-dev-container-py:latest
+    volumes:
+      - ..:/workspace
+      - ${HOME}/.claude:/root/.claude
+      - ${HOME}/.claude.json:/root/.claude.json
+      - uv-cache:/root/.cache/uv
+    tty: true
+    stdin_open: true
+
+volumes:
+  uv-cache:
